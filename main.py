@@ -17,7 +17,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-from config import settings
+from load_yaml import datas
 
 # 准备数据
 x_data = [f"20{i}年" for i in range(17, 23)]
@@ -143,9 +143,9 @@ def pie_plot(x_data, labels, explode, title):
 #     print(pie.get('explode'))
 #     pie_plot(pie.get('x_data'), pie.get('labels'), eval(pie.get('explode')), pie.get('title'))
 if __name__ == '__main__':
-    for i in settings.get('barhs'):
+    for i in datas.get('barhs'):
         barh_plot(i.get('x_ticks'), i.get('y_data'), i.get('x_label'), i.get('y_label'), i.get('title'))
 
-    for i in settings.get('twinx_bars'):
+    for i in datas.get('twinx_bars'):
         twinx_bar_plot(i.get('x_ticks'), i.get('y1_data'), i.get('y2_data'), i.get('x_label'), i.get('y1_label'),
                        i.get('y2_label'), i.get('title'))

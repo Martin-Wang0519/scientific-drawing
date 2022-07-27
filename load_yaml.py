@@ -51,8 +51,8 @@ class YamlParse(object):
         print(self.opts)
 
 
-settings = YamlParse('config.yaml')
+datas = YamlParse('data.yaml')
 
 if __name__ == '__main__':
-    for k, v in settings.get('tasks_info_test').items():
-        print(k, v)
+    pass
+
